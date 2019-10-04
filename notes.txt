@@ -1,0 +1,91 @@
+# Linear Regression Using Scikit Learn
+
+import sklearn.linear_model
+model = sklearn.linear_model.LinearRegression() # Create Linear Regression Object 
+model.fit(X_train, y_train)   # Start teaching the module based on the X and y.
+y_pred = model.predict(X_test) # Start Predition
+===============
+# Select a instance based model looking into k neighbors
+
+import sklearn.neighbors
+k_model = sklearn.neighbors.KNeighborsRegressor(n_neighbors=3)
+===============
+# Split arrays or matrices into random train and test subsets
+
+from sklearn.model_selection import train_test_split
+train_set, test_set = train_test_split(my_data , test_size=0.2, random_state=42) 
+===============
+# Cleaning data with Panda
+
+import panda as pd
+
+housing.dropna(subset=["total_bedrooms"]) # Clean the empty total_bedrooms
+
+housing.drop("total_bedrooms", axis=1) # Get rid of total_bedrooms attribute
+
+median = housing["total_bedrooms"].median() Fill the missing with the median value
+housing["total_bedrooms"].fillna(median, inplace=True)
+===============
+# Split Data to train and test using Sikit Learn
+
+from sklearn.model_selection import train_test_split
+train_set, test_set = train_test_split(data, test_size=0.2, random_state=42)
+===============
+# Split the data into training/testing sets
+X_train = data_X[:-20] (from 0 index to end without last 20 members)
+X_test = data_X[-20:] (The last 20 members)
+===============
+# matplotlib plotting functions.
+
+import matplotlib.pyplot as plt
+
+plt.scatter(X_test, y_test,  color='red')  # This will only draw points.
+plt.plot(X_test, y_pred, color='blue')	# This will draw points and connect them using lines
+===============
+# Scikit-Learn provides a handy class to take care of missing values: This is using median strategy
+
+from sklearn.preprocessing import Imputer
+imputer = Imputer(strategy="median")
+imputer.fit(data)
+===============
+
+# Unsuprevised mostly clustering (Images , etc)
+# reinforcement learning (like a children, chess , games , deepmind , alphaGo)
+
+Instance Based Learning , learning based on an example (Not accepting cheques for some people which their credit score is bad)
+Model Based Learning , there is a ruleset for the module and you follow it. (Do not accept cheque more than 5000 K)
+
+Hyperparameters example is strategy in the imputer constructor. a parameter which is not related to the dataset.
+
+===========
+# Converting text into numbers (encoding) This will assume that the encoded value 0 and 1 are near each other than 0 and 3 which is not right.
+from sklearn.preprocessing import LabelEncoder
+encoder = LabelEncoder()
+data_encoded = encoder.fit_transform(housing_ocean_proximity)
+
+# to avoid near assuming.
+from sklearn.preprocessing import OneHotEncoder
+encoder = OneHotEncoder()
+data_1hot = encoder.fit_transform(data_encoded.reshape(-1,1))
+
+# Notice that the output is a SciPy sparse matrix, instead of a NumPy array
+===============
+
+classification 
+True Positive : Module prediction is true and its True (good)
+False Positive: Module prediction is true and its false (bad)
+False Negative: Module prediction is false and its True (bad)
+True Negative: Module prediction is false and its false (good)
+
+precision , recall and F ??? important
+
+
+logistic regression is a classifier : 
+logistic function ??? 
+===============
+
+decision tree ??
+random force ??
+
+
+

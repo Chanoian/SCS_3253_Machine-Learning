@@ -1,0 +1,25 @@
+# Compiled
+*.pyc
+
+# Docs
+*.json
+*.xml
+*.iml
+
+# Vscode folder
+vscode
+.vscode
+.idea
+
+#PDF
+*.pdf
+
+# Data Set
+datasets
+
+#Image
+images
+
+#Jupyter
+*.ipynb
+.ipynb_checkpoints
